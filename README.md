@@ -139,7 +139,7 @@ const posts = [
   }
 ];
 
-// Schema descriptions
+// Schema defining
 const authorSchema = new schema.Entity("authors");
 
 const commentSchema = new schema.Entity("comments", {
