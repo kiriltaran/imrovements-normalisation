@@ -155,6 +155,51 @@ const postsSchema = new schema.Array(postSchema);
 
 // Normalizing post by defined schema
 const normalizedPosts = normalize(posts, postsSchema);
+
+console.log(normalizedPosts)
+/*
+{
+  "entities": {
+    "authors": {
+      "3": {
+        "id": 3,
+        "nickname": "Evan Abramov"
+      },
+      "4": {
+        "id": 4,
+        "nickname": "Bill Torvalds"
+      }
+    },
+    "comments": {
+      "5": {
+        "id": 5,
+        "content": "Comment text",
+        "author": 4
+      }
+    },
+    "posts": {
+      "1": {
+        "id": 1,
+        "content": "Lorem ipsum dolor sit amet...",
+        "author": 3,
+        "comments": [
+          5
+        ]
+      },
+      "2": {
+        "id": 2,
+        "content": "consectetur adipiscing elit...",
+        "author": 4,
+        "comments": []
+      }
+    }
+  },
+  "result": [
+    1,
+    2
+  ]
+}
+*/
 ```
 
 ## Conclusion
