@@ -1,13 +1,13 @@
 # Data normalisation
 
-## What is it?
+## What is it
 
 It is the process of reorganizing data, that meets two basic requirements:
 
 - there is no redundancy of data (all data is stored in only one place)
 - data dependencies are logical (all related data items are stored together).
 
-## Why should do it?
+## Why should do it
 
 - Decreased memory usage of the app
 - Easier to work with the nested objects to retrieve a nested object and faster to access
@@ -16,7 +16,7 @@ It is the process of reorganizing data, that meets two basic requirements:
 - The logic for retrieving or updating a given item is now fairly simple and consistent. Given an item’s type and its ID, we can directly look it up in a couple simple steps, without having to dig through other objects to find it.
 - Since each data type is separated, an update nested child field of the object would only require new copies of the field value. This will generally mean fewer number of the component re-renders because their data has changed. In contrast, updating a data in the original nested shape would have required updating the whole parent(root) object and likely have caused all of the child components in the UI to re-render themselves.
 
-## How to do it?
+## How to do it
 
 **Main rules**:
 
@@ -25,7 +25,7 @@ It is the process of reorganizing data, that meets two basic requirements:
 - Any references to individual items should be done by storing the item's ID.
 - Arrays of IDs should be used to indicate order.
 
-##### Bad
+###### Bad
 
 ```javascript
 state: () => ({
@@ -60,7 +60,8 @@ state: () => ({
   ]
 });
 ```
-##### Good
+
+###### Good
 
 ```javascript
 state: () => ({
@@ -98,14 +99,15 @@ state: () => ({
 })
 ```
 
-## How to automate it?
+## How to automate it
+
 We have two popular packages to normalise data in our JavaScript applications
 
 - [JSON API Normalizer](https://github.com/yury-dymov/json-api-normalizer) : *transforms data in JSON API standard([JSON API Specification](https://jsonapi.org/)) to normalized data without configuration*
 
 - [Normalizr](https://github.com/paularmstrong/normalizr) : *uses custom schemas definition to create normalized data.*
 
-**Normalizr example**
+### Normalizr example
 
 ```javascript
 // Initial denormalized posts state
