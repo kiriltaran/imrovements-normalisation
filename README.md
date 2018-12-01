@@ -25,7 +25,7 @@ It is the process of reorganizing data, that meets two basic requirements:
 - Any references to individual items should be done by storing the item's ID.
 - Arrays of IDs should be used to indicate order.
 
-**Bad**
+##### Bad
 
 ```javascript
 state: () => ({
@@ -60,7 +60,7 @@ state: () => ({
   ]
 });
 ```
-**Good**
+##### Good
 
 ```javascript
 state: () => ({
