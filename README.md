@@ -89,13 +89,13 @@ state: () => ({
       nickname: 'Bill Torvalds'
     }
   },
-  comments: [
-    {
+  comments: {
+    commentid1: {
       id: 'commentid1',
       content: 'Comment text',
       authorId: 'authorid2'
     }
-  ]
+  }
 })
 ```
 
